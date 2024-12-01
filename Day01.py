@@ -10,6 +10,9 @@ def main(data):
         right.append(pair[1])
     left = sorted(left)
     right = sorted(right)
+    l2 = left.copy()
+    r2 = right.copy()
+
 
     total = 0
     for i in range(len(left)):
@@ -19,6 +22,14 @@ def main(data):
     
     print("======== Part 1 ========")
     print(total)
+
+    total_2 = 0
+    for number in l2:
+        count = r2.count(number)
+        total_2 += count * int(number)
+
+    print("======== Part 2 ========")
+    print(total_2)
 
 
 main(data)
