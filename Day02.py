@@ -21,8 +21,7 @@ def part_1(data):
 
 
 total_safe = part_1(data)
-print("======== Part 1 ========")
-print(total_safe)
+
 
 
 def part_2(data):
@@ -31,8 +30,11 @@ def part_2(data):
         if any(safe_report(report[:i] + report[i+1:]) for i in range(len(report) + 1)):
             total_extra_safe += 1
     return total_extra_safe
-          
 
-total_2 = part_2(data)
-print("======== Part 2 ========")
-print(total_2)
+
+if __name__ == "__main__":
+    print("======== Part 1 ========")
+    print(part_1(data))
+
+    print("======== Part 2 ========")
+    print(part_2(data))

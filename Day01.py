@@ -32,4 +32,5 @@ def main(data):
     print(total_2)
 
 
-main(data)
+if __name__ == "__main__":
+    main(data)

@@ -11,10 +11,6 @@ def part_1(data):
     return total
 
 
-print("======== Part 1 ========")
-print(part_1(data))
-
-
 def part_2(data):
     data = data.split("don't()")
     new_data = []
@@ -30,5 +26,9 @@ def part_2(data):
     return part_1(new_data)
 
 
-print("======== Part 2 ========")
-print(part_2(data))
+if __name__ == "__main__":
+    print("======== Part 1 ========")
+    print(part_1(data))
+
+    print("======== Part 2 ========")
+    print(part_2(data))
