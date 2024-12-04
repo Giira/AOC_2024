@@ -46,6 +46,23 @@ def count_diagonal(data):
                                 d_count += 1
     return d_count
 
+
+def count_x_mas(data):
+    mas_count = 0
+    for i in range(nrows):
+        for j in range(ncols):
+            if data[i][j] == "A":
+                if 1 <= i <= nrows - 2 and 1 <= j <= ncols - 2:
+                    if ((data[i-1][j-1] == "M" and data[i+1][j+1] == "S") or 
+                        (data[i-1][j-1] == "S" and data[i+1][j+1] == "M")) and (
+                            (data[i-1][j+1] == "M" and data[i+1][j-1] == "S") or 
+                            (data[i-1][j+1] == "S" and data[i+1][j-1] == "M")
+                        ):
+                        mas_count += 1
+    return mas_count
+
+
+
 def main(data):
     v_data = []
     for i in range(ncols):
@@ -59,3 +76,6 @@ def main(data):
 if __name__ == "__main__":
     print("======== Part 1 ========")
     print(main(data))
+
+    print("======== Part 2 ========")
+    print(count_x_mas(data))
