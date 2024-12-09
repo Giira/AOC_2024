@@ -1,3 +1,7 @@
+import time
+
+st = time.time()
+
 with open("Day06.txt") as f:
     data = [list(line.strip()) for line in f.readlines()]
 
@@ -83,6 +87,7 @@ def part_2(data):
     return count
 
 
+
 if __name__ == "__main__":
     print("======== Part 1 ========")
     count, locations = part_1(data)
@@ -90,3 +95,5 @@ if __name__ == "__main__":
 
     print("======== Part 2 ========")
     print(part_2(data))
+    et = time.time()
+    print("Exectution time:", et-st, "seconds")
