@@ -1,4 +1,5 @@
 import time
+from tqdm import tqdm
 
 st = time.time()
 
@@ -67,7 +68,7 @@ def part_2(data):
     count = 0
     i, j = start
     blockages = set()
-    for a in range(len(locations) - 2):
+    for a in tqdm(range(len(locations) - 2)):
         moves = set()
         if start != (locations[a+1][0][0], locations[a+1][0][1]):
             if (locations[a+1][0][0], locations[a+1][0][1]) not in blockages:
