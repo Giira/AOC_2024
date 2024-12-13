@@ -69,6 +69,7 @@ def solve(data):
         antinode_all = antinode_all | nodes[node]["anti_node"]
     return len(list(antinode_all)), len(list(antinode_extra))
 
+
 if __name__ == "__main__":
     print("======== Part 1 ========")
     print(solve(data)[0])
